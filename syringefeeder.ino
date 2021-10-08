@@ -1,7 +1,3 @@
-/*************************************
- * Dual Channel DC Motor Driver Board* 
- *  Code Written by Idayu - MYBOTIC  *
- *************************************/
  
 int IN1 = 3; 
 int IN2 = 5; 
@@ -26,44 +22,7 @@ void setup()
 
 void loop()
 {
-  /*
-  if(lastaction=="none" && digitalRead(8)==LOW){
-     feederstate="auto";
-  }else{
-    feederstate="stanby";
-  }
-
-
-  if(feederstate=="auto"){
-    moveforward();
-    delay(50);
-    movestop();
-    delay(2000);
-    if(autofeedcycle==0){
-      feederstate="stanby";
-    }
-    autofeedcycle=autofeedcycle-1;
-    
-  }else if(feederstate=="stanby"){
-    
-    autofeedcycle=4;
-    lastaction="none";
-
-    if (digitalRead(7) == HIGH) {
-    } else {
-       Serial.println("buton1 press");  
-       movebackward();
-       lastaction="backward";
-    }
   
-    if (digitalRead(8) == HIGH) {
-    } else {
-      Serial.println("buton2 press");  
-      moveforward();
-      lastaction="forward";
-    }
-    
-  }*/
     if(digitalRead(7) == LOW && digitalRead(8) == LOW){
        while(digitalRead(7) == LOW && digitalRead(8) == LOW){
           feederstate="auto";
